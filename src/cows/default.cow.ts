@@ -1,0 +1,8 @@
+export const cow: string =`$the_cow = <<"EOC";
+$thoughts   ^__^
+ $thoughts  ($eyes)\\_______
+    (__)\\       )\\/\\
+     $tongue ||----w |
+        ||     ||
+EOC
+`
