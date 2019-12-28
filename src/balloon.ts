@@ -1,4 +1,4 @@
-export const say = function (text: string, wrap: number): string{
+export const say = function (text: string, wrap: number): string {
 	let delimiters = {
 		first : ["/", "\\"],
 		middle : ["|", "|"],

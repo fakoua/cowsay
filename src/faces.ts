@@ -34,14 +34,12 @@ let modes = {
 };
 
 export const faces = function (options) {
-	for (var mode in modes) {
-		if (options[mode] === true) {
-			return modes[mode];
-		}
+	if (options.mode) {
+		let m = modes[options.mode]
+		return m;
 	}
-
 	return {
-		eyes : options.e || "oo",
-		tongue : options.T || "  "
+		eyes : options.eyes || "oo",
+		tongue : options.tongue || "  "
 	};
 };

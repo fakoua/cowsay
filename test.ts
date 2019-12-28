@@ -1,9 +1,8 @@
-import * as cow from './mod.ts'
+import './src/balloon_test.ts'
+import './src/cows_test.ts'
+import './src/faces_test.ts'
+import './src/replacer_test.ts'
+import './mod_test.ts'
+import { runTests } from './test_deps.ts'
 
-let c = await cow.say({
-    text: 'Open: http://localhost:8080',
-    random: true
-})
-
-console.log(c)
-
+runTests()

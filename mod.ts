@@ -25,5 +25,5 @@ async function doIt (options: any, sayAloud: boolean): Promise<string> {
 
 	var action = sayAloud ? "say" : "think";
 
-	return baloon[action](options.text || options._.join(" "), options.n ? null : options.W) + "\n" + cow(face);
+	return baloon[action](options.text || options._.join(" "), options.wrap ? options.wrapLength : null) + "\n" + cow(face);
 }
