@@ -3,28 +3,29 @@ import * as cows from './src/cows.ts'
 import { faces } from './src/faces.ts'
 import {IOptions} from './src/models/IOptions.ts'
 
-export const say = async function (options: IOptions): Promise<string> {
-	return await doIt(options, true);
+export const say = function (options: IOptions): string {
+	return doIt(options, true);
 };
 
-export const think = async function (options: IOptions): Promise<string> {
-	return await doIt(options, false);
+export const think = function (options: IOptions): string {
+	return doIt(options, false);
 };
 
 export const list = function(): Array<string> {
 	return cows.listSync();
 }
 
-async function doIt (options: IOptions, sayAloud: boolean): Promise<string> {
-	var cowFile;
+function doIt (options: IOptions, sayAloud: boolean): string {
+	var cowName;
 	if (options.random) {
 		var cowsList = cows.listSync();
-		cowFile = cowsList[Math.floor(Math.random() * cowsList.length)];
+		let nb = Math.floor(Math.random() * cowsList.length); console.log('-------------- ' + nb)
+		cowName = cowsList[nb];
 	} else {
-		cowFile = options.cow || "default";
+		cowName = options.cow || "cow";
 	}
 
-	var cow = await cows.get(cowFile);
+	var cow = cows.get(cowName);
 	var face = faces(options);
 	face.thoughts = sayAloud ? "\\" : "o";
 

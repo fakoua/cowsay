@@ -18,7 +18,7 @@ Configurable talking cow for Deno
 ```ts
 import * as o from 'https://raw.githubusercontent.com/fakoua/cowsay/master/mod.ts'
 
-let m = await o.say({
+let m = o.say({
     text: 'hello every one'
 })
 console.log(m)
@@ -27,7 +27,7 @@ console.log(m)
 Or you can trigger the cli:
 
 ```bash
-deno -A https://raw.githubusercontent.com/fakoua/cowsay/master/cowsay.ts -t="Hello world"
+deno https://raw.githubusercontent.com/fakoua/cowsay/master/cowsay.ts -t="Hello world"
 ```
 
 ## CLI arguments
@@ -46,13 +46,13 @@ arguments:
     --list       | --ls: List the available cows
 
 example:
-    deno -A https://raw.githubusercontent.com/fakoua/cowsay/master/cowsay.ts -t="Hello World" -r
+    deno https://raw.githubusercontent.com/fakoua/cowsay/master/cowsay.ts -t="Hello World" -r
 ```
 
 ## Options
 
 ```ts
-let m = await o.say({
+let m = o.say({
     text: 'hello',
     cow: 'cat', // Template for a cow (check the folder cows)
     eyes: 'oo', // Select the appearance of the cow's eyes, equivalent to cowsay -e

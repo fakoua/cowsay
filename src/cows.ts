@@ -1,16 +1,8 @@
 import replacer from './replacer.ts'
+import * as cows from './cows/cows.ts'
 
-var textCache = {};
-
-export const get = async function (cow: string) {
-	var text = textCache[cow];
-	if (!text) {
-		let cowPath = `./cows/${cow}.cow.ts`
-		let template = await import(cowPath)
-		text = template.cow
-		textCache[cow] = text;
-	}
-
+export const get = function (cow: string) {
+	let text = cows[cow]
 	return function (options) {
 		return replacer(text, options);
 	};
@@ -26,7 +18,7 @@ export const listSync = function (): Array<string> {
 		'cat2',
 		'coffee',
 		'cube',
-		'default',
+		'cow',
 		'fox',
 		'hand',
 		'kitten',

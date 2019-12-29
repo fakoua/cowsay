@@ -79,7 +79,7 @@ async function main() {
     let res = ""
 
     if (argv.think) {
-        res = await cow.think({
+        res = cow.think({
             text: argv.text,
             cow: argv.cow,
             eyes: argv.eyes,
@@ -90,7 +90,7 @@ async function main() {
             mode: argv.mode
         })
     } else {
-        res = await cow.say({
+        res = cow.say({
             text: argv.text,
             cow: argv.cow,
             eyes: argv.eyes,
@@ -105,6 +105,6 @@ async function main() {
     console.log(res)
 }
 
-await main()
+main()
 
 
