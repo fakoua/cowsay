@@ -35,7 +35,7 @@ deno https://raw.githubusercontent.com/fakoua/cowsay/master/cowsay.ts -t="Hello 
 ```bash
 arguments:
     --text       |   -t: Message Text [ex: --text="Hello world" ]
-    --cow        |   -c: Cow image (default value is "default") [ex: --cow="cat2" ]
+    --cow        |   -c: Cow image (default value is "cow") [ex: --cow="cat2" ]
     --mode       |   -m: Predefined eyes/tonges (from 1 to 8) [ex: --mode=3]
     --eyes       |   -e: Eyes of the image if exists (default: "oo") [ex: --eyes="@@" ]
     --tongue     |   -g: Tongue of the image (default: "U") [ex: --tongue="V" ]
