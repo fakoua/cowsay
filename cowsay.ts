@@ -33,7 +33,7 @@ async function main() {
         },
         default: {
             text: "Deno is great!",
-            cow: "default",
+            cow: "cow",
             eyes: "oo",
             tongue: "U",
             wrap: false,
@@ -54,7 +54,7 @@ async function main() {
         const help = `
     arguments:
         --text       |   -t: Message Text [ex: --text="Hello world" ]
-        --cow        |   -c: Cow image (default value is "default") [ex: --cow="cat2" ]
+        --cow        |   -c: Cow image (default value is "cow") [ex: --cow="cat2" ]
         --mode       |   -m: Predefined eyes/tonges (from 1 to 8) [ex: --mode=3]
         --eyes       |   -e: Eyes of the image if exists (default: "oo") [ex: --eyes="@@" ]
         --tongue     |   -g: Tongue of the image (default: "U") [ex: --tongue="V" ]
