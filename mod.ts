@@ -1,16 +1,21 @@
 import * as baloon from './src/balloon.ts'
 import * as cows from './src/cows.ts'
 import { faces } from './src/faces.ts'
+import {IOptions} from './src/models/IOptions.ts'
 
-export const say = async function (options): Promise<string> {
+export const say = async function (options: IOptions): Promise<string> {
 	return await doIt(options, true);
 };
 
-export const think = async function (options): Promise<string> {
+export const think = async function (options: IOptions): Promise<string> {
 	return await doIt(options, false);
 };
 
-async function doIt (options: any, sayAloud: boolean): Promise<string> {
+export const list = function(): Array<string> {
+	return cows.listSync();
+}
+
+async function doIt (options: IOptions, sayAloud: boolean): Promise<string> {
 	var cowFile;
 	if (options.random) {
 		var cowsList = cows.listSync();
@@ -25,5 +30,5 @@ async function doIt (options: any, sayAloud: boolean): Promise<string> {
 
 	var action = sayAloud ? "say" : "think";
 
-	return baloon[action](options.text || options._.join(" "), options.wrap ? options.wrapLength : null) + "\n" + cow(face);
+	return baloon[action](options.text, options.wrap ? options.wrapLength : null) + "\n" + cow(face);
 }

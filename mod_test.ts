@@ -35,7 +35,7 @@ test(async function test_cowsay_tongue() {
 test(async function test_cowsay_mode_d() {
     let res = await cowsay.say({
         text: 'Deno Is Great',
-        mode: 'd'
+        mode: 2
     })
     assert(res.indexOf('xx')>0)
     assert(res.indexOf('U')>0)

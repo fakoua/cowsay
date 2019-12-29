@@ -1,39 +1,43 @@
-let modes = {
-	"b" : {
+let modes = [
+	{
+		eyes: "oo",
+		tongue: "  "
+	},
+	{
 		eyes : "==",
 		tongue : "  "
 	},
-	"d" : {
+	{
 		eyes : "xx",
 		tongue : "U "
 	},
-	"g" : {
+	{
 		eyes : "$$",
 		tongue : "  "
 	},
-	"p" : {
+	{
 		eyes : "@@",
 		tongue : "  "
 	},
-	"s" : {
+	{
 		eyes : "**",
 		tongue : "U "
 	},
-	"t" : {
+	{
 		eyes : "--",
 		tongue : "  "
 	},
-	"w" : {
+	{
 		eyes : "OO",
 		tongue : "  "
 	},
-	"y" : {
+	{
 		eyes : "..",
 		tongue : "  "
 	}
-};
+];
 
-export const faces = function (options) {
+export const faces = function (options): any {
 	if (options.mode) {
 		let m = modes[options.mode]
 		return m;

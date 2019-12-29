@@ -16,7 +16,7 @@ export const get = async function (cow: string) {
 	};
 }
 
-export const listSync = function () {
+export const listSync = function (): Array<string> {
 	return [
 		'atom',
 		'bearface',

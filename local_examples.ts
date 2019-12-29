@@ -1,9 +1,3 @@
-import * as o from './mod.ts'
-
-let m = await o.say({
-    text: 'hello man',
-    wrap: true,
-    wrapLength: 4
-
-})
-console.log(m)
+import * as faces from './src/faces.ts'
+let res = faces.faces({ mode: 0})
+console.log(res)
