@@ -16,7 +16,7 @@ Configurable talking cow for Deno
 ## Examples
 
 ```ts
-import * as o from 'https://raw.githubusercontent.com/fakoua/cowsay/master/mod.ts'
+import * as o from 'https://deno.land/x/cowsay/mod.ts'
 
 let m = o.say({
     text: 'hello every one'
@@ -27,7 +27,7 @@ console.log(m)
 Or you can trigger the cli:
 
 ```bash
-deno https://raw.githubusercontent.com/fakoua/cowsay/master/cowsay.ts -t="Hello world"
+deno https://deno.land/x/cowsay/cowsay.ts -t="Hello world"
 ```
 
 ## CLI arguments
@@ -46,7 +46,7 @@ arguments:
     --list       | --ls: List the available cows
 
 example:
-    deno https://raw.githubusercontent.com/fakoua/cowsay/master/cowsay.ts -t="Hello World" -r
+    deno https://deno.land/x/cowsay/cowsay.ts -t="Hello World" -r
 ```
 
 ## Options
