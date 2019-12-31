@@ -2,7 +2,7 @@
 
 Configurable talking cow for Deno
 
-```bash
+```
  ________________
 < Deno is Great! >
  ----------------
@@ -32,7 +32,7 @@ deno https://deno.land/x/cowsay/cowsay.ts -t="Hello world"
 
 ## CLI arguments
 
-```bash
+```
 arguments:
     --text       |   -t: Message Text [ex: --text="Hello world" ]
     --cow        |   -c: Cow image (default value is "cow") [ex: --cow="cat2" ]
