@@ -1,9 +1,9 @@
 import * as cow from './mod.ts'
-import dargs from 'https://raw.githubusercontent.com/fakoua/dargs/master/mod.ts'
+import { parse } from "https://deno.land/std/flags/mod.ts";
 
 
 async function main() {
-    const args = Deno.args.slice(1)
+    const args = Deno.args
     const opts = {
         string: [
             "text",
@@ -46,8 +46,7 @@ async function main() {
         }
     }
 
-
-    let argv = dargs(args, opts)
+    let argv = parse(args, opts)
 
 
     if (argv.help) {
