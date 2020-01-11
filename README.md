@@ -1,6 +1,9 @@
 # cowsay
 
-Configurable talking cow for Deno
+Configurable talking cow for deno
+
+[![Build Status](https://api.travis-ci.com/fakoua/cowsay.svg?branch=master)](https://travis-ci.com/fakoua/cowsay)
+[![Build Status](https://github.com/fakoua/cowsay/workflows/CI/badge.svg?branch=master&event=push)](https://github.com/fakoua/cowsay/actions)
 
 ```bash
  ________________
