@@ -1,56 +1,50 @@
 import * as cow from './mod.ts'
 import { parse } from "https://deno.land/std/flags/mod.ts";
+import { IOptions } from './src/models/IOptions.ts';
 
-
-async function main() {
-    const args = Deno.args
-    const opts = {
-        string: [
-            "text",
-            "cow",
-            "eyes",
-            "tongue"
-        ],
-        boolean: [
-            "wrap",
-            "random",
-            "think",
-            "help",
-            "list"
-        ],
-        alias: {
-            random: "r",
-            think: "k",
-            wrap: "w",
-            wrapLength: "wl",
-            help: "h",
-            text: "t",
-            cow: "c",
-            tongue: "g",
-            mode: "m",
-            eyes: "e",
-            list: "ls"
-        },
-        default: {
-            text: "Deno is great!",
-            cow: "cow",
-            eyes: "oo",
-            tongue: "U",
-            wrap: false,
-            wrapLength: 40,
-            mode: null,
-            random: false,
-            think: false,
-            help: false,
-            list: false
-        }
+const opts = {
+    string: [
+        "text",
+        "cow",
+        "eyes",
+        "tongue"
+    ],
+    boolean: [
+        "wrap",
+        "random",
+        "think",
+        "help",
+        "list"
+    ],
+    alias: {
+        random: "r",
+        think: "k",
+        wrap: "w",
+        wrapLength: "wl",
+        help: "h",
+        text: "t",
+        cow: "c",
+        tongue: "g",
+        mode: "m",
+        eyes: "e",
+        list: "ls"
+    },
+    default: {
+        text: "Deno is great!",
+        cow: "cow",
+        eyes: "oo",
+        tongue: "U",
+        wrap: false,
+        wrapLength: 40,
+        mode: null,
+        random: false,
+        think: false,
+        help: false,
+        list: false
     }
+}
 
-    let argv = parse(args, opts)
-
-
-    if (argv.help) {
-        const help = `
+const help = `
     arguments:
         --text       |   -t: Message Text [ex: --text="Hello world" ]
         --cow        |   -c: Cow image (default value is "cow") [ex: --cow="cat2" ]
@@ -65,7 +59,14 @@ async function main() {
 
     example:
         deno -A https://raw.githubusercontent.com/fakoua/cowsay/master/cowsay.ts -t="Hello World" -r
-        `
+        `;
+
+async function main() {
+    const args = Deno.args
+    let argv = parse(args, opts)
+
+
+    if (argv.help) {
         console.log(help)
         Deno.exit(0)
     }
@@ -77,28 +78,21 @@ async function main() {
 
     let res = ""
 
+    let options: IOptions = {
+        text: argv.text,
+        cow: argv.cow,
+        eyes: argv.eyes,
+        tongue: argv.tongue,
+        wrap: argv.wrap,
+        wrapLength: argv.wrapLength,
+        random: argv.random,
+        mode: argv.mode
+    }
+
     if (argv.think) {
-        res = cow.think({
-            text: argv.text,
-            cow: argv.cow,
-            eyes: argv.eyes,
-            tongue: argv.tongue,
-            wrap: argv.wrap,
-            wrapLength: argv.wrapLength,
-            random: argv.random,
-            mode: argv.mode
-        })
+        res = cow.think(options)
     } else {
-        res = cow.say({
-            text: argv.text,
-            cow: argv.cow,
-            eyes: argv.eyes,
-            tongue: argv.tongue,
-            wrap: argv.wrap,
-            wrapLength: argv.wrapLength,
-            random: argv.random,
-            mode: argv.mode
-        })
+        res = cow.say(options)
     }
 
     console.log(res)
