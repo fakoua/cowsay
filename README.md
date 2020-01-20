@@ -30,7 +30,7 @@ console.log(m)
 Or you can trigger the cli:
 
 ```bash
-deno https://deno.land/x/cowsay/cowsay.ts -- -t="Hello world"
+deno https://deno.land/x/cowsay/cowsay.ts -t="Hello world"
 ```
 
 ## CLI arguments
@@ -49,7 +49,7 @@ arguments:
     --list       | --ls: List the available cows
 
 example:
-    deno https://deno.land/x/cowsay/cowsay.ts -- -t="Hello World" -r
+    deno https://deno.land/x/cowsay/cowsay.ts -t="Hello World" -r
 ```
 
 ## Options
