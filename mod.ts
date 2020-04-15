@@ -29,7 +29,7 @@ function doIt (options: IOptions, sayAloud: boolean): string {
 	var face = faces(options);
 	face.thoughts = sayAloud ? "\\" : "o";
 
-	var action = sayAloud ? "say" : "think";
+	var action: "say" | "think" = sayAloud ? "say" : "think";
 
-	return baloon[action](options.text, options.wrap ? options.wrapLength : null) + "\n" + cow(face);
+	return baloon[action](options.text, options.wrap ? options.wrapLength : undefined) + "\n" + cow(face);
 }
