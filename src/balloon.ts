@@ -1,4 +1,4 @@
-export const say = function (text: string, wrap: number): string {
+export const say = function (text: string, wrap?: number): string {
 	let delimiters = {
 		first : ["/", "\\"],
 		middle : ["|", "|"],
@@ -6,10 +6,10 @@ export const say = function (text: string, wrap: number): string {
 		only : ["<", ">"]
 	};
 
-	return format(text, wrap, delimiters);
+	return format(text, delimiters, wrap);
 }
 
-export const think = function (text: string, wrap: number): string {
+export const think = function (text: string, wrap?: number): string {
 	var delimiters = {
 		first : ["(", ")"],
 		middle : ["(", ")"],
@@ -17,10 +17,10 @@ export const think = function (text: string, wrap: number): string {
 		only : ["(", ")"]
 	};
 
-	return format(text, wrap, delimiters);
+	return format(text, delimiters, wrap);
 }
 
-function format (text: string, wrap: number, delimiters: any): string {
+function format (text: string, delimiters: any, wrap?: number): string {
 	var lines = split(text, wrap);
 	var maxLength = max(lines);
 

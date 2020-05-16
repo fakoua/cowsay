@@ -1,3 +1,5 @@
+import { IOptions } from './models/IOptions.ts';
+
 let modes = [
 	{
 		eyes: "oo",
@@ -37,7 +39,7 @@ let modes = [
 	}
 ];
 
-export const faces = function (options): any {
+export const faces = function (options: IOptions): any {
 	if (options.mode) {
 		let m = modes[options.mode]
 		return m;
