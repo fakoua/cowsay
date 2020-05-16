@@ -19,7 +19,7 @@ function doIt (options: IOptions, sayAloud: boolean): string {
 	var cowName;
 	if (options.random) {
 		var cowsList = cows.listSync();
-		let nb = Math.floor(Math.random() * cowsList.length); console.log('-------------- ' + nb)
+		let nb = Math.floor(Math.random() * cowsList.length); 
 		cowName = cowsList[nb];
 	} else {
 		cowName = options.cow || "cow";

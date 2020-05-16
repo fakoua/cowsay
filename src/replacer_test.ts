@@ -1,7 +1,11 @@
-import * as replacer from './replacer.ts'
-import { test, assertEquals } from '../test_deps.ts'
+import * as replacer from "./replacer.ts";
+import { assertEquals } from "../test_deps.ts";
 
-test(function test_replacer_default() {
-    let res = replacer.default('hi$eyeshi', {eyes: 'oo'})
-    assertEquals(res, 'hioohi')
-})
+Deno.test({
+  name: "test_replacer_default",
+
+  fn(): void {
+    let res = replacer.default("hi$eyeshi", { eyes: "oo" });
+    assertEquals(res, "hioohi");
+  },
+});
