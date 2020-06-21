@@ -1,0 +1,14 @@
+{
+    "name": "cowsay",
+    "description": "Configurable talking cow for deno.",
+    "stable": true,
+    "files": [
+        "./cowsay.ts",
+        "./mod.ts",
+        "./mod_test.ts",
+        "./test.ts",
+        "./test_deps.ts",
+        "./README.md",
+        "./src/**/*"
+    ]
+}
