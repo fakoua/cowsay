@@ -2,6 +2,7 @@
     "name": "cowsay",
     "description": "Configurable talking cow for deno.",
     "stable": true,
+    "repository": "https://github.com/fakoua/cowsay",
     "files": [
         "./cowsay.ts",
         "./mod.ts",
