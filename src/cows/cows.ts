@@ -1,4 +1,4 @@
-export const atom: string =`# atom
+export const atom = `# atom
 # via http://pastebin.com/1AZwKrKp
 $the_cow = <<EOC;
        $thoughts
@@ -27,7 +27,7 @@ $the_cow = <<EOC;
 EOC
 `
 
-export const bearface: string =`$the_cow = <<EOC;
+export const bearface = `$the_cow = <<EOC;
  $thoughts
   $thoughts
      .--.              .--.
@@ -43,7 +43,7 @@ export const bearface: string =`$the_cow = <<EOC;
 EOC
 `
 
-export const biohazard: string =`# biohazard symbol
+export const biohazard = `# biohazard symbol
 # via http://pastebin.com/1AZwKrKp
 $the_cow = <<EOC;
      $thoughts
@@ -71,7 +71,7 @@ $the_cow = <<EOC;
 
 EOC
 `
-export const box: string =`# Box
+export const box = `# Box
 $the_cow = <<EOC;
      $thoughts
       $thoughts
@@ -119,7 +119,7 @@ $the_cow = <<EOC;
 EOC
 `
 
-export const cat2: string =`#
+export const cat2 = `#
 #	Cat picture by Joan Stark
 #	Transformed into cowfile by Myroslav Golub
 #
@@ -141,7 +141,7 @@ $the_cow = <<EOC;
 EOC
 `
 
-export const coffee: string =`$the_cow = <<EOC;
+export const coffee = `$the_cow = <<EOC;
 $thoughts      {
  $thoughts  }   }   {
    {   {  }  }
@@ -162,7 +162,7 @@ $thoughts      {
 EOC
 `
 
-export const cube: string =`# Cube
+export const cube = `# Cube
 #
 # from http://www.reddit.com/r/commandline/comments/2lb5ij/what_is_your_favorite_ascii_art/cltrase
 #   also available at https://gist.github.com/th3m4ri0/6e3f631866da31d05030
@@ -184,7 +184,7 @@ $the_cow = <<EOC;
        \\/___________/
 EOC
 `
-export const cow: string =`$the_cow = <<"EOC";
+export const cow = `$the_cow = <<"EOC";
    $thoughts   ^__^
     $thoughts  ($eyes)\\_______
        (__)\\       )\\/\\
@@ -193,7 +193,7 @@ export const cow: string =`$the_cow = <<"EOC";
 EOC
 `
 
-export const fox: string =`# Fox
+export const fox = `# Fox
 # http://www.retrojunkie.com/asciiart/animals/foxes.htm
 $the_cow = <<EOC;
 $thoughts
@@ -210,7 +210,7 @@ $thoughts
 EOC
 `
 
-export const hand: string =`##
+export const hand = `##
 ## これが私の本当の姿だ！
 ##  
 ##
@@ -236,7 +236,7 @@ $the_cow = <<EOC;
 EOC
 `
 
-export const kitten: string =`# Kitten
+export const kitten = `# Kitten
 #
 # based on rfksay by Andrew Northern
 # http://robotfindskitten.org/aw.cgi?main=software.rfk#rfksay
@@ -252,7 +252,7 @@ $the_cow = <<EOC;
 EOC
 `
 
-export const mule: string =`# Mule
+export const mule = `# Mule
 #
 # based on mule from http://rossmason.blogspot.com/2008/10/friday-ascii-art.html 
 #
@@ -283,7 +283,7 @@ $the_cow = <<EOC;
 EOC
 `
 
-export const world: string =`# World
+export const world = `# World
 $the_cow = <<EOC;
    $thoughts
     $thoughts
@@ -296,7 +296,7 @@ $the_cow = <<EOC;
 EOC
 `
 
-export const yasuna: string =`##
+export const yasuna = `##
 $the_cow = <<EOC;
    $thoughts
     $thoughts

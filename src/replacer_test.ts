@@ -5,7 +5,7 @@ Deno.test({
   name: "test_replacer_default",
 
   fn(): void {
-    let res = replacer.default("hi$eyeshi", { eyes: "oo" });
+    const res = replacer.default("hi$eyeshi", { eyes: "oo" });
     assertEquals(res, "hioohi");
   },
 });

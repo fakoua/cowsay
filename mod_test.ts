@@ -5,7 +5,7 @@ Deno.test({
   name: "test_cowsay_1",
 
   fn(): void {
-    let res = cowsay.say({
+    const res = cowsay.say({
       text: "Deno Is Great",
     });
     assert(res.indexOf("Deno Is Great") > 0);
@@ -15,7 +15,7 @@ Deno.test({
 Deno.test({
   name: "test_cowsay_eyes",
   fn(): void {
-    let res = cowsay.say({
+    const res = cowsay.say({
       text: "Deno Is Great",
       eyes: "@@",
     });

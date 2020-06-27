@@ -1,6 +1,6 @@
-import * as cow from './mod.ts'
+import * as cow from "./mod.ts"
 import { parse } from "https://deno.land/std/flags/mod.ts";
-import { IOptions } from './src/models/IOptions.ts';
+import { IOptions } from "./src/models/IOptions.ts";
 
 const opts = {
     string: [
@@ -63,7 +63,7 @@ const help = `
 
 async function main() {
     const args = Deno.args
-    let argv = parse(args, opts)
+    const argv = parse(args, opts)
 
 
     if (argv.help) {
@@ -78,7 +78,7 @@ async function main() {
 
     let res = ""
 
-    let options: IOptions = {
+    const options: IOptions = {
         text: argv.text,
         cow: argv.cow,
         eyes: argv.eyes,

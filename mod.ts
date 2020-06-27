@@ -1,35 +1,38 @@
-import * as baloon from './src/balloon.ts'
-import * as cows from './src/cows.ts'
-import { faces } from './src/faces.ts'
-import {IOptions} from './src/models/IOptions.ts'
+import * as baloon from "./src/balloon.ts";
+import * as cows from "./src/cows.ts";
+import { faces } from "./src/faces.ts";
+import { IOptions } from "./src/models/IOptions.ts";
 
-export const say = function (options: IOptions): string {
-	return doIt(options, true);
+export const say = (options: IOptions): string => {
+  return doIt(options, true);
 };
 
-export const think = function (options: IOptions): string {
-	return doIt(options, false);
+export const think = (options: IOptions): string => {
+  return doIt(options, false);
 };
 
-export const list = function(): Array<string> {
-	return cows.listSync();
-}
+export const list = (): string[] => {
+  return cows.listSync();
+};
 
-function doIt (options: IOptions, sayAloud: boolean): string {
-	var cowName;
-	if (options.random) {
-		var cowsList = cows.listSync();
-		let nb = Math.floor(Math.random() * cowsList.length); 
-		cowName = cowsList[nb];
-	} else {
-		cowName = options.cow || "cow";
-	}
+function doIt(options: IOptions, sayAloud: boolean): string {
+  let cowName;
+  if (options.random) {
+    const cowsList = cows.listSync();
+    const nb = Math.floor(Math.random() * cowsList.length);
+    cowName = cowsList[nb];
+  } else {
+    cowName = options.cow || "cow";
+  }
 
-	var cow = cows.get(cowName);
-	var face = faces(options);
-	face.thoughts = sayAloud ? "\\" : "o";
+  const cow = cows.get(cowName);
+  const face = faces(options);
+  face.thoughts = sayAloud ? "\\" : "o";
 
-	var action: "say" | "think" = sayAloud ? "say" : "think";
+  const action: "say" | "think" = sayAloud ? "say" : "think";
 
-	return baloon[action](options.text, options.wrap ? options.wrapLength : undefined) + "\n" + cow(face);
+  return baloon[action](
+    options.text,
+    options.wrap ? options.wrapLength : undefined,
+  ) + "\n" + cow(face);
 }
