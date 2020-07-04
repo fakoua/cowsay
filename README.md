@@ -2,8 +2,10 @@
 
 Configurable talking cow for deno
 
-[![Build Status](https://api.travis-ci.com/fakoua/cowsay.svg?branch=master)](https://travis-ci.com/fakoua/cowsay)
-[![Build Status](https://github.com/fakoua/cowsay/workflows/CI/badge.svg?branch=master&event=push)](https://github.com/fakoua/cowsay/actions)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/fakoua/cowsay?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/fakoua/cowsay?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/fakoua/cowsay?style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/fakoua/cowsay/Deno%20CI?style=for-the-badge)
 
 ```bash
  ________________
