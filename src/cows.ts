@@ -1,6 +1,6 @@
 import replacer from "./replacer.ts";
 import * as cows from "./cows/cows.ts";
-import { IOptions } from "./models/IOptions.ts";
+import type { IOptions } from "./models/IOptions.ts";
 
 export const get = (cow: string) => {
   const text = (cows as Record<string, string>)[cow];

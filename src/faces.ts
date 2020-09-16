@@ -1,4 +1,4 @@
-import { IOptions } from "./models/IOptions.ts";
+import type { IOptions } from "./models/IOptions.ts";
 
 const modes = [
   {

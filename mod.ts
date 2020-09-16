@@ -1,7 +1,7 @@
 import * as baloon from "./src/balloon.ts";
 import * as cows from "./src/cows.ts";
 import { faces } from "./src/faces.ts";
-import { IOptions } from "./src/models/IOptions.ts";
+import type { IOptions } from "./src/models/IOptions.ts";
 
 export const say = (options: IOptions): string => {
   return doIt(options, true);
